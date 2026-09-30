@@ -1,0 +1,14 @@
+quarter,period_end,lots_k,method,source
+2023Q2,2023-06-30,573.4,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828024034972/rba-20240630.htm
+2023Q3,2023-09-30,555.0,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828024046505/rba-20240930.htm
+2023Q4,2023-12-31,572.5,FY less Q1-Q3,https://www.sec.gov/Archives/edgar/data/1046102/000162828025008201/rba-20241231.htm
+2024Q1,2024-03-31,584.6,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828025023159/rba-20250331.htm
+2024Q2,2024-06-30,547.7,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828025038323/rba-20250630.htm
+2024Q3,2024-09-30,553.8,reported,https://www.sec.gov/Archives/edgar/data/1046102/000104610225000009/rba-20250930.htm
+2024Q4,2024-12-31,611.1,FY less Q1-Q3,https://www.sec.gov/Archives/edgar/data/1046102/000162828026011682/rba-20251231.htm
+2025Q1,2025-03-31,625.6,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828026029808/rba-20260331.htm
+2025Q2,2025-06-30,595.9,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828026052582/rba-20260630.htm
+2025Q3,2025-09-30,601.7,reported,https://www.sec.gov/Archives/edgar/data/1046102/000104610225000009/rba-20250930.htm
+2025Q4,2025-12-31,624.5,FY less Q1-Q3,https://www.sec.gov/Archives/edgar/data/1046102/000162828026011682/rba-20251231.htm
+2026Q1,2026-03-31,631.3,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828026029808/rba-20260331.htm
+2026Q2,2026-06-30,658.8,reported,https://www.sec.gov/Archives/edgar/data/1046102/000162828026052582/rba-20260630.htm

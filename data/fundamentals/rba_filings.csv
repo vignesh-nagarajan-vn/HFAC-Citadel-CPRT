@@ -1,0 +1,15 @@
+form,filingDate,reportDate,url
+10-Q,2023-05-10,2023-03-31,https://www.sec.gov/Archives/edgar/data/1046102/000155837023009098/rba-20230331x10q.htm
+10-Q,2023-08-03,2023-06-30,https://www.sec.gov/Archives/edgar/data/1046102/000155837023013210/rba-20230630x10q.htm
+10-Q,2023-11-09,2023-09-30,https://www.sec.gov/Archives/edgar/data/1046102/000162828023038257/rba-20230930.htm
+10-K,2024-02-28,2023-12-31,https://www.sec.gov/Archives/edgar/data/1046102/000162828024007570/rba-20231231.htm
+10-Q,2024-05-09,2024-03-31,https://www.sec.gov/Archives/edgar/data/1046102/000162828024022241/rba-20240331.htm
+10-Q,2024-08-06,2024-06-30,https://www.sec.gov/Archives/edgar/data/1046102/000162828024034972/rba-20240630.htm
+10-Q,2024-11-08,2024-09-30,https://www.sec.gov/Archives/edgar/data/1046102/000162828024046505/rba-20240930.htm
+10-K,2025-02-26,2024-12-31,https://www.sec.gov/Archives/edgar/data/1046102/000162828025008201/rba-20241231.htm
+10-Q,2025-05-07,2025-03-31,https://www.sec.gov/Archives/edgar/data/1046102/000162828025023159/rba-20250331.htm
+10-Q,2025-08-06,2025-06-30,https://www.sec.gov/Archives/edgar/data/1046102/000162828025038323/rba-20250630.htm
+10-Q,2025-11-06,2025-09-30,https://www.sec.gov/Archives/edgar/data/1046102/000104610225000009/rba-20250930.htm
+10-K,2026-02-25,2025-12-31,https://www.sec.gov/Archives/edgar/data/1046102/000162828026011682/rba-20251231.htm
+10-Q,2026-05-04,2026-03-31,https://www.sec.gov/Archives/edgar/data/1046102/000162828026029808/rba-20260331.htm
+10-Q,2026-08-04,2026-06-30,https://www.sec.gov/Archives/edgar/data/1046102/000162828026052582/rba-20260630.htm
