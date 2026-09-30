@@ -139,8 +139,8 @@ def appendix_figure(r, path):
     vs = r["val_summary"]
     ax2.plot(pe.index, pe, color=INK, lw=0.9)
     ax2.axhline(vs["pe_10y_median"], color=GREY, ls="--", lw=0.6)
-    ax2.annotate(f"Median {vs['pe_10y_median']:.0f}x", (pe.index[0], vs["pe_10y_median"]),
-                 xytext=(2, -2), textcoords="offset points", fontsize=5.8, color="0.35", va="top")
+    ax2.text(0.02, 0.04, f"Dashed: 10-year median {vs['pe_10y_median']:.0f}x",
+             transform=ax2.transAxes, fontsize=5.8, color="0.35")
     ax2.annotate(f"Now {vs['pe_now']:.1f}x", (pe.index[-1], pe.iloc[-1]), xytext=(-4, -2),
                  textcoords="offset points", fontsize=6, color=RED, ha="right", va="top")
     ax2.set_title(f"D. {TICKER} trailing P/E, 10 years")
