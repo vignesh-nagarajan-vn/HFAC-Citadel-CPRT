@@ -1,6 +1,5 @@
-> [!CAUTION]
-> $\color{red}\textsf{Pivot: we originally planned to pitch NKE long (buy the dip). After early research we switched to a CPRT short.}$
-> The old repo is kept for reference: [HFAC-Citadel-NKE](https://github.com/vignesh-nagarajan-vn/HFAC-Citadel-NKE).
+> $\color{red}\textsf{We originally planned to pitch NKE long (buy the dip). After early research we switched to a CPRT short.}$
+- The old repo is kept for reference: [HFAC-Citadel-NKE](https://github.com/vignesh-nagarajan-vn/HFAC-Citadel-NKE).
 
 # HFAC x Citadel Stock Pitch: Technical Analysis
 
