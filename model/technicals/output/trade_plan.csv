@@ -1,0 +1,6 @@
+level,price,pct,reward_risk
+entry zone $29.19-30.49 (mid),29.84,9.1,
+stop (1.5 ATR above 50d / 23.6%),32.6,19.2,
+target 52w_low,26.74,-2.2,1.1
+target floor_2021_22,25.55,-6.6,1.6
+target 15x_ttm_eps,23.25,-15.0,2.4

@@ -1,0 +1,16 @@
+signal,label,horizon,n,signal_median_%,signal_mean_%,signal_hit_rate_%,all_days_median_%,all_days_hit_rate_%,pctile_vs_random
+daily,Daily RSI<30 and >20% below 200d,3M,14,2.8,2.9,57.0,5.3,64.0,0.29
+daily,Daily RSI<30 and >20% below 200d,6M,14,-7.4,2.4,43.0,9.9,69.0,0.01
+daily,Daily RSI<30 and >20% below 200d,12M,12,21.8,25.4,75.0,21.4,78.0,0.51
+weekly,Weekly RSI<30,3M,8,-2.8,3.0,38.0,5.3,64.0,0.08
+weekly,Weekly RSI<30,6M,8,-0.3,10.4,50.0,9.9,69.0,0.11
+weekly,Weekly RSI<30,12M,6,23.0,32.6,67.0,21.4,78.0,0.55
+monthly,Monthly RSI<30,3M,0,,,,5.3,64.0,
+monthly,Monthly RSI<30,6M,0,,,,9.9,69.0,
+monthly,Monthly RSI<30,12M,0,,,,21.4,78.0,
+retest,Rally into falling 50d in downtrend,3M,24,4.8,3.9,62.0,5.3,64.0,0.45
+retest,Rally into falling 50d in downtrend,6M,23,15.7,15.8,78.0,9.9,69.0,0.85
+retest,Rally into falling 50d in downtrend,12M,22,23.4,38.2,91.0,21.4,78.0,0.61
+in_downtrend,Any day in confirmed downtrend,3M,1346,4.8,2.6,55.0,5.3,64.0,
+in_downtrend,Any day in confirmed downtrend,6M,1283,8.4,8.6,57.0,9.9,69.0,
+in_downtrend,Any day in confirmed downtrend,12M,1157,25.5,36.0,77.0,21.4,78.0,

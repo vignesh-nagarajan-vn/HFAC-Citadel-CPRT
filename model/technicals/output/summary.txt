@@ -1,0 +1,107 @@
+CPRT TECHNICAL SUMMARY as of 2026-09-30 (last bar may be intraday)
+================================================================
+
+TREND
+  Close                       $27.36
+  50-day / 200-day SMA        $30.49 / $33.61  (50 below 200)
+  Distance from 50 / 200-day  -10.3% / -18.6%
+  200-day slope, last 20d     -2.8%
+  Days in a row below 200-day 340
+  All-time high (adjusted)    $63.84 on 2025-05-16
+  Drawdown from ATH           -57.2%
+  Lowest close since          2022-10-20 (excluding the past year)
+  Return 1M / YTD / 1Y        -17.1% / -30.1% / -38.7%
+
+MOMENTUM
+  RSI(14) daily / weekly / monthly  32.0 / 35.4 / 33.5
+  MACD vs signal              -1.11 vs -0.72 (below signal)
+
+VOLUME AND VOLATILITY
+  Volume last 5d vs 50d avg   0.88x
+  Up/down volume, 20d         0.25
+  OBV, last 20d               falling
+  ATR(14)                     $0.89 (3.3% of price)
+  Realized vol 1M / 1Y        37.9% / 31.1%
+
+VALUATION (trailing EPS as reported to Yahoo)
+  Trailing P/E now            17.6x (10Y median 33.7x, 0.6 pctile)
+  P/E at the May 2025 high    42.8x
+  TTM EPS now / 1Y ago        $1.55 / $1.60 (-3.1%); 3Y CAGR +6.9%
+
+POSITIONING AND STREET
+  Short interest              4.6% of float, 3.3 days to cover (as of 2026-09-15)
+  Short interest change m/m   -24.7%
+  Street mean / median target $39.00 / $37.00 (range $25-55, 10 analysts, rating 'buy')
+  Earnings implied move       +/-10.8% (ATM straddle, 2026-11-20 expiry)
+
+KEY LEVELS (52-week window unless named)
+  52w_low        $  26.74  (-2.2% from here)
+  52w_high       $  45.89  (+67.8% from here)
+  sma50          $  30.49  (+11.5% from here)
+  sma200         $  33.61  (+22.9% from here)
+  fib_23.6       $  31.26  (+14.3% from here)
+  fib_38.2       $  34.06  (+24.5% from here)
+  fib_50.0       $  36.31  (+32.8% from here)
+  floor_2021_22  $  25.55  (-6.6% from here)
+  vol_node_1     $  29.19  (+6.7% from here)
+  vol_node_2     $  32.87  (+20.2% from here)
+  vol_node_3     $  33.48  (+22.4% from here)
+  vol_node_4     $  39.00  (+42.6% from here)
+
+TRADE PLAN (short; pct is vs today's close)
+                           level  price   pct  reward_risk
+   entry zone $29.19-30.49 (mid)  29.84   9.1          NaN
+stop (1.5 ATR above 50d / 23.6%)  32.60  19.2          NaN
+                  target 52w_low  26.74  -2.2          1.1
+            target floor_2021_22  25.55  -6.6          1.6
+              target 15x_ttm_eps  23.25 -15.0          2.4
+
+SIGNAL STUDY (median forward return vs all days)
+      signal horizon    n  signal_median_%  signal_mean_%  signal_hit_rate_%  all_days_median_%  all_days_hit_rate_%  pctile_vs_random
+       daily      3M   14              2.8            2.9               57.0                5.3                 64.0              0.29
+       daily      6M   14             -7.4            2.4               43.0                9.9                 69.0              0.01
+       daily     12M   12             21.8           25.4               75.0               21.4                 78.0              0.51
+      weekly      3M    8             -2.8            3.0               38.0                5.3                 64.0              0.08
+      weekly      6M    8             -0.3           10.4               50.0                9.9                 69.0              0.11
+      weekly     12M    6             23.0           32.6               67.0               21.4                 78.0              0.55
+     monthly      3M    0              NaN            NaN                NaN                5.3                 64.0               NaN
+     monthly      6M    0              NaN            NaN                NaN                9.9                 69.0               NaN
+     monthly     12M    0              NaN            NaN                NaN               21.4                 78.0               NaN
+      retest      3M   24              4.8            3.9               62.0                5.3                 64.0              0.45
+      retest      6M   23             15.7           15.8               78.0                9.9                 69.0              0.85
+      retest     12M   22             23.4           38.2               91.0               21.4                 78.0              0.61
+in_downtrend      3M 1346              4.8            2.6               55.0                5.3                 64.0               NaN
+in_downtrend      6M 1283              8.4            8.6               57.0                9.9                 69.0               NaN
+in_downtrend     12M 1157             25.5           36.0               77.0               21.4                 78.0               NaN
+  pctile_vs_random: share of random same-size samples with a lower median.
+  For a short, low is good. Small samples and overlapping regimes. Context, not proof.
+
+EARNINGS REACTIONS (next close vs report-day close)
+               group  n  avg_abs_next_day_%  median_next_day_%  up_rate_%  median_next_5d_%
+                 all 98                 5.5                0.7       53.0               0.6
+             last_12 12                 4.0               -2.2       25.0              -2.8
+pre_below_200d_15pct 10                11.3                0.6       50.0              -0.3
+            eps_miss 30                 6.3               -3.2       33.0              -4.0
+
+RELATIVE STRENGTH (CPRT return minus other, percentage points)
+  vs  3M_spread_%  6M_spread_%  1Y_spread_%  2Y_spread_%  ratio_10y_pctile
+ SPY         -8.2        -36.3        -55.6        -85.2             0.002
+ XLI          3.1        -22.1        -49.8        -76.3             0.138
+ RBA         22.7         -3.2        -15.0        -48.2             0.135
+OPLN         10.0        -34.9        -60.0       -155.0             0.277
+ LKQ          6.2          2.4        -17.4        -10.7             0.776
+ KMX        -14.3        -53.8        -63.8        -23.5             0.632
+  ratio_10y_pctile: where CPRT/other sits in its 10-year range (0 = lowest).
+
+DRAWDOWNS OVER 30% SINCE 1994
+ peak_date trough_date  depth_%  months_to_trough recovery_date  months_trough_to_recovery  ret_12m_after_trough_%  ttm_eps_yoy_at_trough_%
+1996-02-05  1996-12-10    -64.4              10.2    1998-12-31                       24.7                    65.2                      NaN
+1999-07-15  1999-10-01    -31.8               2.6    1999-12-01                        2.0                    53.6                      NaN
+2000-02-10  2000-10-17    -43.3               8.2    2001-04-12                        5.8                   137.2                      NaN
+2001-12-26  2003-03-11    -72.5              14.5    2004-06-28                       15.6                   179.5                      NaN
+2004-06-29  2004-09-20    -33.2               2.7    2004-12-14                        2.8                    29.8                     25.0
+2008-06-23  2008-12-02    -51.9               5.3    2012-01-18                       37.6                    54.3                     10.0
+2018-09-11  2018-12-24    -32.4               3.4    2019-04-24                        4.0                   102.3                     45.5
+2020-02-19  2020-03-23    -43.8               1.1    2020-09-02                        5.4                    82.7                     30.6
+2021-11-16  2022-06-16    -35.4               7.0    2023-05-10                       10.8                    70.8                     31.0
+2025-05-16  2026-09-29    -57.5              16.5          None                        NaN                     NaN                     -3.1

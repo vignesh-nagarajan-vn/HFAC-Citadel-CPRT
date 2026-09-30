@@ -1,0 +1,5 @@
+group,n,avg_abs_next_day_%,median_next_day_%,up_rate_%,median_next_5d_%
+all,98,5.5,0.7,53.0,0.6
+last_12,12,4.0,-2.2,25.0,-2.8
+pre_below_200d_15pct,10,11.3,0.6,50.0,-0.3
+eps_miss,30,6.3,-3.2,33.0,-4.0
