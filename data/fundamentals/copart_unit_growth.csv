@@ -1,0 +1,10 @@
+fiscal_period,period_end,global_units_yoy,global_ins_yoy,us_ins_yoy,us_ins_yoy_ex_cat,us_units_yoy,intl_units_yoy,source
+Q2 FY25,2025-01-31,,8.0,9.0,,,,"Q2 FY25 call (Feb 20 2025), via GuruFocus/Yahoo highlights; rounded, confirm on transcript"
+Q3 FY25,2025-04-30,,-0.3,-0.9,,,6.0,"Q3 FY25 call (May 22 2025), via Yahoo highlights"
+Q4 FY25,2025-07-31,,-1.9,-2.1,,-1.8,,"Q4 FY25 call (Sep 4 2025), via Yahoo highlights"
+Q1 FY26,2025-10-31,-6.7,-8.1,-9.5,-7.3,,-0.5,"Q1 FY26 call (Nov 20 2025), Investing.com transcript"
+Q2 FY26,2026-01-31,-8.0,-9.3,-10.7,-4.8,,-1.0,"Q2 FY26 call (Feb 19 2026), Motley Fool transcript"
+Q3 FY26,2026-04-30,-2.4,-2.7,-4.2,-3.0,,5.9,"Q3 FY26 call (May 21 2026), Motley Fool transcript"
+Q4 FY26,2026-07-31,-2.9,-4.2,-7.5,,-5.7,10.0,"Q4 FY26 call (Sep 10 2026), Motley Fool transcript"
+FY25,2025-07-31,,4.5,4.2,,,,"Q4 FY25 call (Sep 4 2025)"
+FY26,2026-07-31,-5.5,,-8.0,,-6.9,3.7,"Q4 FY26 call (Sep 10 2026); global ex-CAT -3.1%"

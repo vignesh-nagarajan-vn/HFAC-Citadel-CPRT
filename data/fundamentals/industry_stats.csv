@@ -1,0 +1,32 @@
+topic,metric,period,value,unit,source,url
+claims,U.S. collision claim frequency y/y,Q4 FY26 (to Jul 2026),-3.4,%,Copart Q4 FY26 call,https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+claims,U.S. collision claim frequency y/y,Q1 FY26 (to Oct 2025),-7.5,%,Copart Q1 FY26 call,https://www.investing.com/news/transcripts/earnings-call-transcript-copart-q1-2026-shows-eps-beat-revenue-miss-93CH-4371903
+claims,Earned car years y/y (fewer insured vehicles),Q1 FY26 (to Oct 2025),-4.1,%,Copart Q1 FY26 call,https://www.investing.com/news/transcripts/earnings-call-transcript-copart-q1-2026-shows-eps-beat-revenue-miss-93CH-4371903
+claims,Earned car years y/y (fewer insured vehicles),Q3 FY26 (to Apr 2026),-4.0,%,Copart Q3 FY26 call,https://www.fool.com/earnings/call-transcripts/2026/05/25/copart-cprt-q3-2026-earnings-transcript/
+claims,Repairable claim volume y/y,2025,-9.7,%,CCC Crash Course 2026,https://www.cccis.com/reports/crash-course-2026
+claims,Repairable claim volume y/y,Jan-Aug 2025,-10.4,%,CCC via Autobody News,https://www.autobodynews.com/news/2025-data-points-to-fewer-claims-more-collision-repair-complexity-in-2026
+claims,Total claim volume y/y,Jan-Jul 2025,-8.5,%,CCC via Autobody News,https://www.autobodynews.com/news/2025-data-points-to-fewer-claims-more-collision-repair-complexity-in-2026
+claims,U.S. personal auto claims (count),2025,31.6,millions,Team research notes; source to confirm,
+claims,U.S. personal auto claims (count),2022 (peak),34.4,millions,Team research notes; source to confirm,
+claims,Customers with deductibles of $1000+,2025,26,%,J.D. Power 2025 Auto Claims Satisfaction Study via Autobody News,https://www.autobodynews.com/news/2025-data-points-to-fewer-claims-more-collision-repair-complexity-in-2026
+claims,Customers who skipped a claim over rate worries,2025,7,%,J.D. Power 2025 Auto Claims Satisfaction Study via Autobody News,https://www.autobodynews.com/news/2025-data-points-to-fewer-claims-more-collision-repair-complexity-in-2026
+claims,Repair appraisals under $2000 (share),2019 vs mid-2025,41.5 -> 25.5,%,CCC via Autobody News,https://www.autobodynews.com/news/2025-data-points-to-fewer-claims-more-collision-repair-complexity-in-2026
+severity,Total loss frequency,2015,15.6,% of claims,Copart Q2 FY26 call (CCC data),https://www.fool.com/earnings/call-transcripts/2026/05/21/copart-cprt-q2-2026-earnings-transcript/
+severity,Total loss frequency,2025,23.1,% of claims,CCC Crash Course 2026,https://www.cccis.com/reports/crash-course-2026
+severity,Total loss frequency,Q2 2026,23.3,% of claims,Copart Q4 FY26 call (vs 22.4% Q2 2025),https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+severity,Average total cost of repair,2025,4818,$,CCC Crash Course 2026 (+1.7% y/y),https://www.cccis.com/reports/crash-course-2026
+severity,Average collision claim severity,Q4 FY26,6300,$,Copart Q4 FY26 call (+8.8% y/y),https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+severity,Repair cost vs 2019,Q4 FY26,50,% higher,Copart Q4 FY26 call,https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+exposure,Vehicle miles traveled y/y,Q4 FY26,0.27,%,Copart Q4 FY26 call,https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+exposure,Vehicles in operation y/y,Q4 FY26,1.6,%,Copart Q4 FY26 call,https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+safety,AEB cut in rear-end crashes,IIHS studies,50,%,IIHS (56% for injury rear-end crashes),https://www.iihs.org/news/detail/front-crash-prevention-slashes-police-reported-rear-end-crashes
+safety,AEB required on all new U.S. light vehicles,FMVSS 127,2029-09-01,date,NHTSA final rule,https://www.nhtsa.gov/document/final-rule-automatic-emergency-braking-systems-light-vehicles-web
+safety,Share of repair estimates with ADAS calibration,Q3 2025,35.6,%,Autobody News (26.9% a year earlier),https://www.autobodynews.com/news/2025-data-points-to-fewer-claims-more-collision-repair-complexity-in-2026
+autonomy,Waymo paid rides per week,Sep 2026,500000,rides,Startup Fortune (14 U.S. cities; target 1M by end-2026),https://startupfortune.com/waymo-now-runs-paid-robotaxis-in-14-cities-chasing-1-million-rides-a-week/
+competition,Copart U.S. insurance assignments y/y ex one lost customer,Q4 FY26,2.3,%,Copart Q4 FY26 call (reported -7.5%),https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+competition,Progressive salvage units at IAA (share),late 2025,~75 -> ~90,%,Transportation Today citing BofA (Dec 15 2025); not confirmed by either company,https://transportationtodaynews.com/news/36872-rb-global-rebuild-takes-hold-as-shifting-progressive-behavior-puts-new-pressure-on-copart/
+competition,Progressive became #1 U.S. auto insurer,May 2026,,,Simply Wall St / Margin Valley,https://marginvalley.substack.com/p/the-rb-global-win-nobody-priced-correctly
+competition,RB Global automotive unit outperformance vs market,Q2 2026,6th straight quarter,,RB Global Q2 2026 call,https://investor.rbglobal.com/news/news-details/2026/RB-Global-Reports-Second-Quarter-2026-Results/default.aspx
+competition,Copart to acquire ACV Auctions,Sep 10 2026,10.50,$ per share cash,ACV 8-K / Copart tender offer,https://www.nasdaq.com/press-release/copart-announces-commencement-tender-offer-acquire-acv-2026-09-17
+competition,ACV vehicles sold per year,2025,800000,units,Copart Q4 FY26 call (GMV ~$10B),https://www.fool.com/earnings/call-transcripts/2026/09/11/copart-cprt-q4-2026-earnings-call-transcript/
+competition,Manheim vehicles offered per year,recent,8000000,units,Cox Automotive / Wikipedia; private company so no quarterly data,https://en.wikipedia.org/wiki/Manheim_Auctions
