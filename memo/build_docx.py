@@ -1,4 +1,4 @@
-"""Build the Word version of the CPRT short memo (mirrors CPRT_short_memo_v1.tex).
+"""Build the Word version of the CPRT short memo (mirrors CPRT_short_memo_v2.tex).
 
 Usage: python memo/build_docx.py
 """
@@ -14,7 +14,7 @@ from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "CPRT_short_memo_v1.docx"
+OUT = HERE / "CPRT_short_memo_v2.docx"
 FIGURE = HERE.parent / "model" / "fundamentals" / "output" / "industry_figure.png"
 
 NAVY = RGBColor(0x1F, 0x3A, 0x5F)
@@ -161,117 +161,139 @@ def build():
         size=8.5,
     )
 
-    # Recommendation box
+    # Recommendation box: recommendation, thesis, variant view
     box = doc.add_table(rows=1, cols=1)
     cell_margins(box, top=60, bottom=60, left=100, right=100)
     cell = box.cell(0, 0)
     cell.width = text_width
     shade(cell, "EEF2F7")
-    p = cell.paragraphs[0]
-    spacing(p, after=0)
-    add_runs(
-        p,
-        "**Recommendation: short CPRT, price target $21.50 (21% downside).** Copart runs a toll road "
-        "on wrecked cars, and fewer cars are using the road. U.S. collision claim frequency keeps falling "
-        "(−3.4% y/y). Drivers carry higher deductibles and skip small claims, and cars are getting harder "
-        "to crash. Inside that shrinking pool, Copart is losing share to its only real rival, IAA. The stock "
-        "is down 57% and a 17.6x P/E looks cheap next to a 34x ten-year median, so the bull case is “buy "
-        "the dip.” We think it is a value trap. Earnings are falling for the first time in any of Copart's "
-        "major drawdowns, and consensus still expects FY27 EPS growth of 11%. We see FY27 EPS 18% below the Street.",
-    )
+    box_pars = [
+        "**Recommendation: short CPRT, price target $21.50 (21% downside, 6–12 months).** Copart runs a toll "
+        "road on wrecked cars and is paid per car, and fewer cars are using the road.",
+        "**Thesis.** (1) *Supply is shrinking for structural reasons:* drivers file fewer collision claims because "
+        "insurance and repairs got expensive, and safer cars crash less. (2) *Copart is losing share of what is "
+        "left* to IAA, its only real rival. (3) *Earnings are now falling:* fewer cars through fixed-cost yards cut "
+        "profit faster than revenue, so the “cheap” multiple is a value trap.",
+        "**Variant view.** The Street treats the 57% drawdown as a cyclical dip to buy: the stock trades at 17.6x "
+        "P/E vs. a 34x ten-year median, and consensus has FY27 EPS growing 11% to $1.75. We think the unit decline "
+        "is structural and share-driven, so it will not reverse with the cycle. We see FY27 EPS of $1.44, 18% "
+        "below the Street. Unlike every prior Copart drawdown, earnings are falling this time.",
+    ]
+    for i, text in enumerate(box_pars):
+        p = cell.paragraphs[0] if i == 0 else cell.add_paragraph()
+        spacing(p, after=0 if i == len(box_pars) - 1 else 2)
+        add_runs(p, text)
 
     section(doc, "Company overview")
     para(
         doc,
-        "Copart sells wrecked and unwanted vehicles through online auctions in the U.S. and abroad "
-        "(international was 19% of Q4 FY26 revenue). When an insurer decides a car costs more to fix than it "
-        "is worth, it declares a total loss and consigns the car to Copart. Copart tows it, stores it, lists it "
-        "and sells it to rebuilders, dismantlers, exporters and dealers, and 38% of U.S. units go to "
-        "international buyers. Copart keeps buyer and seller fees; the insurer keeps the proceeds. Roughly 80% "
-        "of volume comes from insurance companies. FY26 (July year-end) revenue was $4.67B (85% service fees), "
-        "operating income $1.65B and EPS $1.55. Copart has $4.5B of cash and securities, no meaningful debt, "
-        "and bought back $1.6B of stock in FY26. In September 2026 it agreed to buy ACV Auctions, a "
-        "dealer-to-dealer wholesale marketplace, for $10.50 per share in cash (~$1.8B).",
+        "Copart sells wrecked and unwanted vehicles through online auctions in the U.S. and abroad (19% of Q4 "
+        "FY26 revenue is international). When an insurer decides a car costs more to fix than it is worth (a "
+        "total loss), it consigns the car to Copart, which tows, stores and sells it to rebuilders, dismantlers, "
+        "exporters and dealers for buyer and seller fees. About 80% of volume comes from insurers, so Copart's "
+        "revenue depends on how many cars insurers total. FY26 (July year-end) revenue was $4.67B (85% service "
+        "fees), operating income $1.65B and EPS $1.55. Copart holds $4.5B of cash and securities with no "
+        "meaningful debt, bought back $1.6B of stock in FY26, and in September 2026 agreed to buy dealer "
+        "wholesale marketplace ACV Auctions for ~$1.8B in cash.",
     )
 
     section(doc, "Industry: a two-player market fed by insurance claims")
     para(
         doc,
         "U.S. salvage auctions are effectively a duopoly: Copart and IAA (owned by RB Global since 2023). "
-        "Supply follows a simple chain: *crash → claim → total loss → auction.* Two forces pull in opposite "
-        "directions. Rising repair costs (+57% since 2019) push more claimed cars into total losses, so "
-        "total-loss frequency hit a record 23.3% in Q2 2026, up from 15.6% in 2015. That lifts the price of "
-        "each car. But the number of claims is falling, and Copart is paid per car. A higher total-loss rate "
-        "cannot offset a shrinking base of claims forever: total losses are already nearly a quarter of claims.",
+        "Supply follows a simple chain: *crash → claim → total loss → auction.* Rising repair costs push more "
+        "claimed cars into total losses (a record 23.3% of claims in Q2 2026, vs. 15.6% in 2015), which lifts "
+        "the value of each car. But Copart is paid per car, and the number of claims is falling. With total "
+        "losses already near a quarter of claims, a higher total-loss rate can no longer make up for a "
+        "shrinking base of claims.",
     )
 
     section(doc, "Thesis 1: The supply of wrecked cars is in structural decline")
     bullets(doc, [
-        "**Fewer claims, not fewer miles.** U.S. collision claim frequency fell 3.4% y/y in Copart's latest "
-        "quarter, after −7.5% in the quarter to October 2025. Repairable claims fell 9.7% in 2025 (CCC). Yet "
-        "miles driven are up 2.5% vs. 2019. People still crash; they file less.",
-        "**Insurance got expensive, so drivers self-insure.** Auto insurance prices are up 49% since 2019 and "
-        "repair prices up 57%. 26% of policyholders now carry a $1,000+ deductible, and 7% skipped a claim over "
-        "rate worries (J.D. Power). Insured vehicle-years (earned car years) fell ~4% y/y. Every dropped "
-        "collision policy removes a potential Copart car.",
-        "**Cars are getting harder to crash.** Automatic emergency braking cuts rear-end crashes by ~50% "
-        "(IIHS), and NHTSA makes it mandatory on all new light vehicles from September 2029. As the fleet turns "
-        "over, crash frequency keeps falling for a decade. This is structural, not cyclical.",
+        "**Expensive insurance and repairs push drivers out of the claims system (Exhibit 1C).** Since 2019, auto "
+        "insurance prices are up 49% and repair prices up 57%, far ahead of 31% overall inflation. Drivers respond "
+        "by raising deductibles (26% now carry $1,000+), dropping collision cover and paying for small repairs "
+        "themselves (7% skipped a claim over rate worries, J.D. Power). Each of these is a crash that never "
+        "becomes a claim, and so never becomes a Copart car. That is why collision claim frequency fell 3.4% y/y "
+        "in Copart's latest quarter and repairable claims fell 9.7% in 2025 (CCC).",
+        "**People are not driving less, so the problem is claims, not traffic (Exhibit 1C).** Miles driven are 2% "
+        "above 2019 and transit ridership is still 18% below it, so as many cars are on the road as ever. Crash "
+        "exposure has not fallen; claims have. This undercuts the bull case that volume returns as driving "
+        "recovers: driving has already recovered and Copart's units still fell. Volume returns only if insurance "
+        "gets cheap enough to bring drivers back to filing, and repair costs, still up 7.8% y/y, push the other way.",
+        "**Safer cars will shrink the pool for a decade.** Automatic emergency braking cuts rear-end crashes by "
+        "~50% (IIHS) and is mandatory on all new U.S. light vehicles from September 2029. As older cars are "
+        "replaced, fewer crashes happen at all, which lowers Copart's supply even if claim filing recovers. This "
+        "is a structural headwind, not a cycle to wait out.",
     ])
 
     section(doc, "Thesis 2: Copart is losing share inside a shrinking market")
     bullets(doc, [
-        "**IAA is taking share every quarter.** Over the same 12 months, IAA's automotive lots grew 5.4% while "
-        "Copart's units fell 5.5%. The combined pool fell only 1.6%, so most of Copart's decline is lost share. "
-        "Its share of the two-player pool fell **from 63.9% to 61.4%**: about **167k units and $166M of service "
-        "revenue** a year (Exhibit 1B).",
-        "**The fastest-growing insurer favors the rival.** Management said Q4 FY26 U.S. insurance assignments "
-        "would have *grown* 2.3% without one lost customer, vs. a 7.5% decline reported. That customer was ~10% "
-        "of Copart's U.S. insurance volume. Industry reports identify it as Progressive, which became the largest "
-        "U.S. auto insurer in 2026 and now sends ~90% of its salvage to IAA. Share is following the insurer that "
-        "is winning share.",
-        "**IAA fixed its weakness.** Under RB Global, IAA cut cycle times by nearly a week and has beaten the "
-        "market on units for six straight quarters. Copart's historic edge over a poorly run rival is narrowing.",
+        "**IAA is winning the cars Copart loses (Exhibit 1A).** IAA's unit growth has beaten Copart's U.S. "
+        "insurance units in every quarter since early 2025, by up to 18 points. If falling claims were the only "
+        "problem, both companies would shrink together. Instead, over the last 12 months IAA grew 5.4% while "
+        "Copart fell 5.5%, and the combined pool fell only 1.6%. Most of Copart's decline is lost share, not a "
+        "weak market.",
+        "**The lost share is worth ~$166M of revenue a year (Exhibit 1B).** Copart's share of the two-player pool "
+        "fell from 63.9% to 61.4% in one year, about 167k cars. At Copart's fee per car that is $166M of service "
+        "revenue, ~4% of the total, moving to a rival. It lands on yards whose costs do not fall with volume, so "
+        "the hit to profit is larger than the hit to revenue (Thesis 3).",
+        "**The lost customer is the insurer that is growing fastest.** Management said U.S. insurance units would "
+        "have *grown* 2.3% in Q4 FY26 without one lost customer, vs. a 7.5% decline reported. Industry reports "
+        "name Progressive, now the largest U.S. auto insurer, which sends ~90% of its salvage to IAA. As "
+        "Progressive adds policyholders, IAA adds cars automatically. IAA has also cut cycle times by nearly a "
+        "week under RB Global, so Copart's old service edge over a poorly run rival is gone.",
     ])
 
     section(doc, "Thesis 3: Falling earnings make the “cheap” multiple a trap")
     bullets(doc, [
-        "**Margins are already breaking.** In Q4 FY26 revenue rose 2.4%, but gross profit fell 5.5%, operating "
-        "income fell 10.6% and EPS fell 14.6%. Yards have fixed costs, and U.S. facility cost per unit rose 14.2% "
-        "as volume fell. Higher prices per car (+5.4% revenue per unit) are no longer enough.",
-        "**A tenth of EPS is interest income, and it is shrinking.** FY26 other income, mostly Treasury bill "
-        "interest, was $182M, about 10% of net income. The ACV deal spends ~$1.8B of that cash, costing ~$0.06 "
-        "of EPS before ACV's own losses. Management guides ACV to breakeven, not accretion, until FY28.",
-        "**This drawdown is different.** In each of Copart's five prior 30%+ drawdowns with earnings data, "
-        "trailing EPS was still growing 10–46%, so buying the dip worked. Today trailing EPS is down 3% and "
-        "falling. After weekly oversold signals since 1996, the stock's median 6-month return was −0.3%, vs. "
-        "+9.9% on a random day.",
+        "**Fewer cars through fixed-cost yards means falling profit.** Copart pays for its yards, tow network and "
+        "staff whether 4.0M or 4.5M cars arrive. In Q4 FY26 revenue per car rose 5.4% but U.S. facility cost per "
+        "car rose 14.2%, so revenue grew 2.4% while operating income fell 10.6% and EPS fell 14.6%. Higher car "
+        "values no longer cover the cost of lost volume, and each further unit decline cuts profit faster than "
+        "revenue.",
+        "**The cash cushion under EPS is being spent.** Interest on Copart's cash ($182M of other income) was "
+        "about 10% of FY26 net income. The ACV deal spends ~$1.8B of that cash, removing ~$0.06 of EPS before "
+        "ACV's own losses, and management does not expect ACV to add to earnings until FY28. One support under "
+        "EPS goes away just as the core business weakens.",
+        "**Why buying the dip fails this time.** In Copart's five prior 30%+ drawdowns, trailing EPS was still "
+        "growing 10–46%, so the stock recovered once sentiment turned. Today trailing EPS is down 3% and falling, "
+        "and a low P/E is only cheap if earnings hold. Since 1996, buying CPRT after weekly oversold signals "
+        "returned a median −0.3% over six months, vs. +9.9% on a random day.",
     ])
 
     p = doc.add_paragraph()
     spacing(p, before=3, after=1)
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.add_run().add_picture(str(FIGURE), width=int(text_width * 0.92))
+    p.add_run().add_picture(str(FIGURE), width=int(text_width * 0.84))
     p = doc.add_paragraph()
     spacing(p, after=3)
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     add_runs(
         p,
-        "**Exhibit 1.** Unit growth, IAA vs. Copart U.S. insurance (A); share of the Copart + IAA salvage pool "
-        "(B); insurance and repair prices, miles driven and transit ridership, 2019 = 100 (C).",
+        "**Exhibit 1.** (A) Y/y unit growth: IAA has outgrown Copart's U.S. insurance units every quarter since "
+        "early 2025. (B) Copart's share of the Copart + IAA pool fell 2.6 pts in a year. (C) 2019 = 100: "
+        "insurance and repair prices are up 50%+, pushing drivers to skip claims, while miles driven are flat "
+        "and transit is down, so fewer claims does not mean less driving.",
         size=8,
     )
 
     section(doc, "Valuation: FY27 EPS of $1.44, 18% below consensus")
     para(
         doc,
-        "We build FY27 EPS from units, revenue per unit and margin. In the base case, units fall 3% as the lost "
-        "insurer and falling claims carry into the first half, and revenue per unit rises 4% on higher car "
-        "values. Operating margin settles at 33%, near the Q4 FY26 exit rate of 32%, and other income falls to "
-        "$110M after the ACV payment. That gives **EPS of $1.44 vs. the Street's $1.75**. At 15x, a discount to "
-        "share-gaining RB Global (16.8x forward) and a premium to salvage-parts buyer LKQ (7.4x), the base target "
-        "is **$21.50**. That implies 9.7x EV/EBITDA, below today's 11.1x.",
+        "We build FY27 EPS from units, revenue per unit and margin (Exhibit 2). In the base case, units fall 3% "
+        "as the lost insurer and falling claims carry into the first half, and revenue per unit rises 4% on "
+        "higher car values. Operating margin settles at 33%, near the Q4 FY26 exit rate of 32%, because fixed "
+        "yard costs are spread over fewer cars, and other income falls to $110M after the ACV payment. That gives "
+        "**EPS of $1.44 vs. the Street's $1.75**. At 15x, a discount to share-gaining RB Global (16.8x forward) "
+        "and a premium to salvage-parts buyer LKQ (7.4x), the base target is **$21.50**. That implies 9.7x "
+        "EV/EBITDA, below today's 11.1x.",
     )
+    p = doc.add_paragraph()
+    spacing(p, before=2, after=2)
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.keep_with_next = True
+    add_runs(p, "**Exhibit 2.** FY27 EPS scenarios and price targets", size=8)
     rows = [
         ["Scenario (prob.)", "Units", "Rev./unit", "Op. margin", "FY27 EPS", "vs. Street", "P/E", "Target", "vs. price"],
         ["Bear (25%)", "−6%", "+3%", "31.0%", "$1.30", "−26%", "13x", "$16.84", "−38%"],
@@ -294,11 +316,10 @@ def build():
         "U.S. insurance units and cost-per-unit growth should push FY27 estimates toward our $1.44.",
         "**RB Global Q3 results (early Nov 2026).** A seventh straight quarter of IAA unit gains would confirm the "
         "share shift is not a one-customer event.",
-        "**ACV closing (by end of 2026).** Cash leaves the balance sheet, interest income falls, and ACV's losses "
-        "consolidate. That exposes Copart to dealer wholesale, a market led by Manheim and OPENLANE where Copart "
-        "has no edge.",
-        "**Monthly claims data.** Continued declines in collision frequency and repairable claims (CCC, insurer "
-        "disclosures) keep pressure on the unit outlook.",
+        "**ACV closing (by end of 2026).** Interest income falls and ACV's losses consolidate, pushing Copart into "
+        "dealer wholesale, led by Manheim and OPENLANE, where it has no edge.",
+        "**Monthly claims data.** Further declines in collision frequency and repairable claims (CCC, insurers) "
+        "keep pressure on units.",
     ])
 
     section(doc, "Risks and mitigants")
