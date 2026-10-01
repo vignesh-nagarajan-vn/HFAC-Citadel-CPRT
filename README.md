@@ -10,7 +10,7 @@ Valuation model and supporting analysis for the 2026 HFAC x Citadel Intercollegi
 - **Team lead / HFAC selectee:** Vignesh Nagarajan (submits the application and memo)
 - **Team:** Vignesh Nagarajan, Pranav Krishnan, Saatvik Rao
 - **Memo:** [v2 (PDF)](memo/CPRT_short_memo_v2.pdf) / [v2 (Word)](memo/CPRT_short_memo_v2.docx), 2 pages, submission draft (v1 kept for reference)
-- **Links:** [Competition info](https://www.harvardfac.org/hfac-citadel-pitch-comp), [Google Doc](https://docs.google.com/document/d/1W0Z29RHcEgl9cZ-dJxxJexGG5ROe01wZisUpLVy-FxQ/edit?usp=sharing) (team only)
+- **Links:** [Competition info](https://www.harvardfac.org/hfac-citadel-pitch-comp), [Submission directives](docs/competition_directives.md) (due Oct 2, 2026)
 
 > **Note:** The memo and model must be anonymized per competition rules (no team, school, or club identifiers). This README is internal.
 
@@ -25,6 +25,7 @@ model/
     output/               charts, tables, memo snippets
   fundamentals/           market share and macro work (Python)
     output/               industry chart, tables, research summary
+docs/                     competition submission directives
 memo/                     pitch memo (v1, v2) and one-page technical memo (PDF + LaTeX source)
 requirements.txt
 ```
