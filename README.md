@@ -12,7 +12,7 @@ Valuation model and supporting analysis for the 2026 HFAC x Citadel Intercollegi
 - **Memo:** [Final (PDF)](memo/CPRT_short_memo_final.pdf) / [Final (Word)](memo/CPRT_short_memo_final.docx), 2 pages, as submitted (v1, v2 kept for reference)
 - **Model:** [CPRT_short_model.xlsx](model/excel/CPRT_short_model.xlsx), financial model with DCF, comps and LBO
 - **Links:** [Competition info](https://www.harvardfac.org/hfac-citadel-pitch-comp), [Submission directives](docs/competition_directives.md) (due Oct 2, 2026)
-- **Status:** Application submitted Oct 2, 2026. Confirmation email expected the morning of Oct 3.
+- **Status:** Application submitted Oct 2, 2026.
 
 > **Note:** The memo and model must be anonymized per competition rules (no team, school, or club identifiers). This README is internal.
 
@@ -80,5 +80,5 @@ Copart unit growth (earnings calls) and industry claim stats (CCC, IIHS, NHTSA, 
 
 ## Progress & Contributions
 
-- **Vignesh Nagarajan:** Leads the technical analysis. Built the Python pipeline that pulls 32 years of CPRT, benchmark and peer data and studies trend, momentum, oversold and downtrend signals, drawdown history against EPS growth, valuation, earnings reactions, relative strength, short interest and options-implied moves. It produces the memo exhibit, key levels and a stop/target plan for the short. Also built the market share work, which parses RB Global's SEC filings to size Copart's share loss to IAA, and drafted memo v1 with a FY27 scenario valuation. Reviewed the approach with a mentor who has an MBA and prior banking experience.
-- **Pranav Krishnan and Saatvik Rao:** Lead the fundamental analysis and equity research, covering Copart's business, the salvage auction industry, competitors (RB Global/IAA, Manheim) and the drivers of structural decline. Pranav is pulling consensus estimates and industry data from the Bloomberg Terminal. Building the DCF model, which projects revenue, margins and free cash flow to reach an intrinsic value per share, with sensitivity tables on WACC and terminal growth to test the short case. Pranav consulted two finance mentors, a Top 5 finalist at NIBC and a macro trader at an asset manager in New York City.
+- **Vignesh Nagarajan:** Led the technical analysis and market share work. Built this repo, the Python pipelines and FY27 scenario valuation, drafted memo v1, and coordinated team meetings. Reviewed the approach with a mentor who has an MBA and prior banking experience.
+- **Pranav Krishnan and Saatvik Rao:** Led the fundamental analysis and equity research. Built the Excel model (DCF, comps, LBO) with Bloomberg consensus and industry data. Pranav consulted two finance mentors, a Top 5 NIBC finalist and a macro trader at a New York City asset manager.
