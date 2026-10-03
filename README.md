@@ -12,6 +12,7 @@ Valuation model and supporting analysis for the 2026 HFAC x Citadel Intercollegi
 - **Memo:** [Final (PDF)](memo/CPRT_short_memo_final.pdf) / [Final (Word)](memo/CPRT_short_memo_final.docx), 2 pages, as submitted (v1, v2 kept for reference)
 - **Model:** [CPRT_short_model.xlsx](model/excel/CPRT_short_model.xlsx), financial model with DCF, comps and LBO
 - **Links:** [Competition info](https://www.harvardfac.org/hfac-citadel-pitch-comp), [Submission directives](docs/competition_directives.md) (due Oct 2, 2026)
+- **Status:** Application submitted Oct 2, 2026. Confirmation email expected the morning of Oct 3.
 
 > **Note:** The memo and model must be anonymized per competition rules (no team, school, or club identifiers). This README is internal.
 
